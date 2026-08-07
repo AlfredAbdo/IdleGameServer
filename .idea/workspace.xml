@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="AutomaticModuleUnloader">
+    <loaded-modules>
+      <module name="idle-game.client.webMain" />
+      <module name="idle-game.web.jsTest" />
+      <module name="idle-game.client.wasmJsTest" />
+      <module name="idle-game.web.webTest" />
+      <module name="idle-game.web.webMain" />
+      <module name="idle-game.web.commonMain" />
+      <module name="idle-game.client.webTest" />
+      <module name="idle-game" />
+      <module name="idle-game.core" />
+      <module name="idle-game.server" />
+      <module name="idle-game.core.jvmMain" />
+      <module name="idle-game.core.jvmTest" />
+      <module name="idle-game.core.commonMain" />
+      <module name="idle-game.core.commonTest" />
+      <module name="idle-game.server.main" />
+      <module name="idle-game.server.test" />
+      <module name="idle-game.web" />
+      <module name="idle-game.web.jsMain" />
+      <module name="idle-game.web.commonTest" />
+      <module name="idle-game.client.appleMain" />
+      <module name="idle-game.client" />
+      <module name="idle-game.client.nativeMain" />
+      <module name="idle-game.client.jvmTest" />
+      <module name="idle-game.client.wasmJsMain" />
+      <module name="idle-game.client.nativeTest" />
+      <module name="idle-game.client.jsMain" />
+      <module name="idle-game.client.iosTest" />
+      <module name="idle-game.client.jvmMain" />
+      <module name="idle-game.client.jsTest" />
+      <module name="idle-game.client.iosMain" />
+      <module name="idle-game.client.iosArm64Test" />
+      <module name="idle-game.client.iosSimulatorArm64Test" />
+      <module name="idle-game.client.iosSimulatorArm64Main" />
+      <module name="idle-game.client.commonMain" />
+      <module name="idle-game.client.appleTest" />
+      <module name="idle-game.client.iosArm64Main" />
+      <module name="idle-game.client.commonTest" />
+    </loaded-modules>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6885a68a-0888-4fb4-97e0-70b6c2202b9d" name="Changes" comment="Initial commit">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/core_jvm_1_0_0_SNAPSHOT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/build.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.swagger-codegen-ignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.swagger-codegen/VERSION" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/libs.versions.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/build.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/kotlin/Routing.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/kotlin/config/Apis.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/kotlin/config/DI.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/kotlin/config/Security.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/kotlin/config/StatusPages.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/kotlin/data/Achievement.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/kotlin/data/AchievementCondition.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/kotlin/data/GameItem.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/kotlin/data/GameItemState.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/kotlin/data/User.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/kotlin/data/dto/PostSaveDTO.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/kotlin/data/dto/PostUserDTO.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/kotlin/data/dto/UserResponseDTO.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/kotlin/data/values/Achievements.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/kotlin/data/values/AnimationThresholds.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/kotlin/data/values/GameItems.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/kotlin/database/MainService.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/kotlin/database/types/DurationColumnTransformer.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/kotlin/main.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/resources/application.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/resources/documentation.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/resources/logback.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/test/kotlin/ServerTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="idle-game" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin File" />
+        <option value="Kotlin Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;AlfredAbdo&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:AlfredAbdo/IdleGameServer.git&quot;,
+    &quot;accountId&quot;: &quot;6f70b723-9479-47e3-bca3-058208ecb075&quot;
+  }
+}</component>
+  <component name="HttpClientEndpointsTabState">
+    <option name="cachedRequestData" value="&lt;CachedHttpClientTabRequests&gt;&#10;  &lt;entry key=&quot;c9868cc7019fb9a49e103103b7c1313babf9e726&quot; value=&quot;###&amp;#10;GET http://localhost:8080/api/users&quot; /&gt;&#10;  &lt;entry key=&quot;911d6285987b1629757afb4a028b7b477b8a5fb1&quot; value=&quot;###&amp;#10;POST http://localhost:8080/api/save?&amp;#10;    userId={{$random.alphanumeric(8)}}&quot; /&gt;&#10;&lt;/CachedHttpClientTabRequests&gt;" />
+  </component>
+  <component name="HttpClientOnboardingState">{
+  &quot;isOnboardingCommentShown&quot;: true
+}</component>
+  <component name="KmpPackageLockUpdaterState">{
+  &quot;jsModulesKotlinGradlePluginVersion&quot;: {},
+  &quot;wasmModulesKotlinGradlePluginVersion&quot;: {}
+}</component>
+  <component name="KotlinMultiplatform" KONAN_HOME="$USER_HOME$/.konan/kotlin-native-prebuilt-linux-x86_64-2.4.10" />
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3HUY2LiUgGuIxRJhh6JOBNN9DBO" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;CidrDebugProfileConversion&quot;: &quot;true&quot;,
+    &quot;Gradle.Build idle-game.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.idle-game [kotlinUpgradePackageLock].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.idle-game [kotlinUpgradeYarnLock].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.idle-game [kotlinWasmUpgradePackageLock].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.idle-game [kotlinWasmUpgradeYarnLock].executor&quot;: &quot;Run&quot;,
+    &quot;Ktor.EngineMain.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;develop/main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.jshint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.jshint&quot;: &quot;&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;JSON&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
+      <recent name="data.dto" />
+      <recent name="data" />
+    </key>
+    <key name="K2MoveDeclarationsDialog.RECENT_PACKAGE_KEY">
+      <recent name="alfredabdo.ktor.idlegame.data" />
+      <recent name="alfredabdo.ktor.idlegame.config" />
+      <recent name="alfredabdo.ktor.idlegame" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="EngineMain" type="KtorApplicationConfigurationType" factoryName="Ktor" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="io.ktor.server.netty.EngineMain" />
+      <module name="idle-game.server.main" />
+      <option name="alternativeJrePath" />
+      <option name="alternativeJrePathEnabled" value="false" />
+      <option name="includeProvidedScope" value="false" />
+      <option name="mainClass" value="io.ktor.server.netty.EngineMain" />
+      <option name="passParentEnvs" value="true" />
+      <option name="programParameters" />
+      <option name="shortenCommandLine" />
+      <option name="vmParameters" />
+      <option name="workingDirectory" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-63390994e64e-intellij.indexing.shared.core-IU-262.8665.337" />
+        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-IU-262.8665.337" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6885a68a-0888-4fb4-97e0-70b6c2202b9d" name="Changes" comment="Initial commit" />
+      <created>1785923911297</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1785923911297</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+  </component>
+</project>

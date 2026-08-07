@@ -1,0 +1,10 @@
+ktor:
+  deployment:
+    port: 8080
+  application:
+    modules:
+      - alfredabdo.ktor.idlegame.config.DIKt.configureDependencies
+      - alfredabdo.ktor.idlegame.config.ApisKt.configureApis
+      - alfredabdo.ktor.idlegame.config.SecurityKt.configureSecurity
+      - alfredabdo.ktor.idlegame.config.StatusPagesKt.configureStatuses
+      - alfredabdo.ktor.idlegame.RoutingKt.configureRouting
