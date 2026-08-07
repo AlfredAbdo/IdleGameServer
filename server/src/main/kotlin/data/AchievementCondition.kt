@@ -34,14 +34,14 @@ data class AchievementCondition(
         @SerialName("index") val index: Int,
         @SerialName("level") val level: ValueComparison<Int>? = null,
         @SerialName("unlocked") val unlocked: Boolean? = null,
-        @SerialName("fillRateMs") val fillRateMs: ValueComparison<Double>? = null,
+        @SerialName("fillRateMs") val fillRateMs: ValueComparison<Long>? = null,
         @SerialName("gain") val gain: ValueComparison<Double>? = null,
         @SerialName("upgradeCost") val upgradeCost: ValueComparison<Double>? = null,
     ) {
         companion object {
             fun level(index: Int, condition: ValueComparison<Int>) = ItemConditionData(index, level = condition)
             fun unlocked(index: Int, condition: Boolean = true) = ItemConditionData(index, unlocked = condition)
-            fun fillRate(index: Int, condition: ValueComparison<Double>) = ItemConditionData(index, fillRateMs = condition)
+            fun fillRate(index: Int, condition: ValueComparison<Long>) = ItemConditionData(index, fillRateMs = condition)
             fun gain(index: Int, condition: ValueComparison<Double>) = ItemConditionData(index, gain = condition)
             fun upgradeCost(index: Int, condition: ValueComparison<Double>) = ItemConditionData(index, upgradeCost = condition)
         }
@@ -96,6 +96,7 @@ data class AchievementCondition(
 
 
     private typealias IntValueComparison = ValueComparisonBuilder.() -> ValueComparison<Int>
+    private typealias LongValueComparison = ValueComparisonBuilder.() -> ValueComparison<Long>
     private typealias DoubleValueComparison = ValueComparisonBuilder.() -> ValueComparison<Double>
 
     object ValueComparisonBuilder {
@@ -109,7 +110,7 @@ data class AchievementCondition(
     class ItemConditionDataBuilder(private val index: Int) {
         fun level(condition: IntValueComparison) = ItemConditionData(index, level = ValueComparisonBuilder.condition())
         fun unlocked(condition: Boolean = true) = ItemConditionData(index, unlocked = condition)
-        fun fillRate(condition: DoubleValueComparison) = ItemConditionData(index, fillRateMs = ValueComparisonBuilder.condition())
+        fun fillRate(condition: LongValueComparison) = ItemConditionData(index, fillRateMs = ValueComparisonBuilder.condition())
         fun gain(condition: DoubleValueComparison) = ItemConditionData(index, gain = ValueComparisonBuilder.condition())
         fun upgradeCost(condition: DoubleValueComparison) = ItemConditionData(index, upgradeCost = ValueComparisonBuilder.condition())
     }

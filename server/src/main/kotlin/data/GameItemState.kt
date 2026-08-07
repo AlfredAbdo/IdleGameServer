@@ -8,7 +8,7 @@ import kotlin.time.Duration
 data class GameItemState(
     @SerialName("level") val level: Int,
     @SerialName("unlocked") val unlocked: Boolean,
-    @SerialName("fillRate") val fillRate: Duration,
+    @SerialName("fillRateMs") val fillRateMs: Long,
     @SerialName("gain") val gain: Double,
     @SerialName("upgradeCost") val upgradeCost: Double,
     @SerialName("progress") val progress: Double,
@@ -17,7 +17,7 @@ data class GameItemState(
         fun defaultUsing(item: GameItem) = GameItemState(
             1,
             item.unlockAmount == null,
-            item.baseFillRate,
+            item.baseFillRateMs,
             item.baseGain,
             item.baseUpgradeCost,
             0.0,

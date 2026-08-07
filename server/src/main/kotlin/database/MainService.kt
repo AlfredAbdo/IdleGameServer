@@ -3,7 +3,6 @@ package alfredabdo.ktor.idlegame.database
 import alfredabdo.ktor.idlegame.data.*
 import alfredabdo.ktor.idlegame.data.values.achievements
 import alfredabdo.ktor.idlegame.data.values.gameItems
-import alfredabdo.ktor.idlegame.database.types.DurationColumnTransformer
 import kotlinx.coroutines.async
 import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.flow.*
@@ -28,7 +27,7 @@ class MainService(val database: R2dbcDatabase) {
     object GameItems : UIntIdTable("game_items") {
         val title = varchar("title", 255)
         val description = text("description")
-        val baseFillRate = long("base_fill_rate_ms").transform(DurationColumnTransformer)
+        val baseFillRateMs = long("base_fill_rate_ms")
         val baseGain = double("base_gain")
         val costMultiplier = double("cost_multiplier")
         val fillRateMultiplier = double("fill_rate_multiplier")
@@ -42,7 +41,7 @@ class MainService(val database: R2dbcDatabase) {
                 this[id] = item.id
                 this[title] = item.title
                 this[description] = item.description
-                this[baseFillRate] = item.baseFillRate
+                this[baseFillRateMs] = item.baseFillRateMs
                 this[baseGain] = item.baseGain
                 this[costMultiplier] = item.upgradeMultipliers.costMultiplier
                 this[fillRateMultiplier] = item.upgradeMultipliers.fillRateMultiplier
@@ -89,7 +88,7 @@ class MainService(val database: R2dbcDatabase) {
 
         val level = integer("level")
         val unlocked = bool("unlocked")
-        val fillRate = long("fill_rate_ms").transform(DurationColumnTransformer)
+        val fillRateMs = long("fill_rate_ms")
         val gain = double("gain")
         val upgradeCost = double("upgrade_cost")
         val progress = double("progress").default(0.0)
@@ -138,10 +137,11 @@ class MainService(val database: R2dbcDatabase) {
                 it[Users.username] = username
                 it[Users.activeAchievement] = firstAchievement?.get(Achievements.id)?.value
             }
-        }.let { results ->
+        }.let { result ->
             User(
-                results[Users.username],
-                results[Users.coins],
+                result[Users.id].value,
+                result[Users.username],
+                result[Users.coins],
                 gameItemsAsync.await().associate { item -> item.id to GameItemState.defaultUsing(item) },
                 firstAchievement?.let { achievement ->
                     Achievement(
@@ -162,7 +162,7 @@ class MainService(val database: R2dbcDatabase) {
                     it[GameItems.id].value,
                     it[GameItems.title],
                     it[GameItems.description],
-                    it[GameItems.baseFillRate],
+                    it[GameItems.baseFillRateMs],
                     it[GameItems.baseGain],
                     GameItem.UpgradeMultipliers(
                         it[GameItems.costMultiplier],
@@ -176,6 +176,7 @@ class MainService(val database: R2dbcDatabase) {
             .toList()
     }
 
+    @Throws(NoSuchElementException::class)
     suspend fun getUser(userId: UInt): User = coroutineScope {
         val user = getUserRow(userId)
 
@@ -194,6 +195,7 @@ class MainService(val database: R2dbcDatabase) {
         val activeAchievement = activeAchievementAsync?.await()
 
         User(
+            user[Users.id].value,
             user[Users.username],
             user[Users.coins],
             gameItems.associate { item ->
@@ -201,7 +203,7 @@ class MainService(val database: R2dbcDatabase) {
                     GameItemState(
                         it[GameItemSaves.level],
                         it[GameItemSaves.unlocked],
-                        it[GameItemSaves.fillRate],
+                        it[GameItemSaves.fillRateMs],
                         it[GameItemSaves.gain],
                         it[GameItemSaves.upgradeCost],
                         it[GameItemSaves.progress],
@@ -246,7 +248,7 @@ class MainService(val database: R2dbcDatabase) {
             this[GameItemSaves.gameItemId] = itemId
             this[GameItemSaves.level] = save.level
             this[GameItemSaves.unlocked] = save.unlocked
-            this[GameItemSaves.fillRate] = save.fillRate
+            this[GameItemSaves.fillRateMs] = save.fillRateMs
             this[GameItemSaves.gain] = save.gain
             this[GameItemSaves.upgradeCost] = save.upgradeCost
             this[GameItemSaves.progress] = save.progress
@@ -259,6 +261,7 @@ class MainService(val database: R2dbcDatabase) {
     }
 
 
+    @Throws(NoSuchElementException::class)
     private suspend fun getUserRow(userId: UInt) = suspendTransaction(database) {
         Users.selectAll()
             .where { Users.id eq userId }

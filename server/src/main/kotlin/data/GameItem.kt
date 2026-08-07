@@ -9,7 +9,7 @@ data class GameItem(
     @SerialName("id") val id: UInt,
     @SerialName("title") val title: String,
     @SerialName("description") val description: String,
-    @SerialName("baseFillRate") val baseFillRate: Duration,
+    @SerialName("baseFillRateMs") val baseFillRateMs: Long,
     @SerialName("baseGain") val baseGain: Double,
     @SerialName("upgradeMultipliers") val upgradeMultipliers: UpgradeMultipliers,
     @SerialName("unlockAmount") val unlockAmount: Double?,

@@ -29,7 +29,13 @@ suspend fun Application.configureRouting() {
                 val userId = call.requireHeader("userId").toUInt() //this version does not show the header in the Endpoints tool window
 
                 coroutineScope {
-                    val user = async { mainService.getUser(userId) }
+                    val user = async {
+                        try {
+                            mainService.getUser(userId)
+                        } catch (e: NoSuchElementException) {
+                            throw NoSuchElementException("Cannot find the user with an id of: $userId", e)
+                        }
+                    }
                     val items = async { mainService.getGameItems() }
                     val achievements = async { mainService.getAchievements() }
 

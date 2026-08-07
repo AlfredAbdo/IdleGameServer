@@ -26,7 +26,7 @@ val achievements: List<Achievement>
             "Get any item duration to $infiniteAnimationThreshold or below",
             "NOT THE EYES!",
             listOf(
-                AchievementCondition.anyItem { fillRate { leq(infiniteAnimationThreshold.inWholeMilliseconds.toDouble()) } },
+                AchievementCondition.anyItem { fillRate { leq(infiniteAnimationThreshold.inWholeMilliseconds) } },
             ),
         ),
         Achievement(

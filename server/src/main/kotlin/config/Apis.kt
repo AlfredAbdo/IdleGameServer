@@ -42,6 +42,7 @@ fun Application.configureApis() {
             Json(DefaultJson) {
                 encodeDefaults = false
                 explicitNulls = false
+                ignoreUnknownKeys = true
             }
         )
     }
