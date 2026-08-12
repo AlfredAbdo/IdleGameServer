@@ -82,6 +82,17 @@ suspend fun Application.configureRouting() {
 
                 call.respond(HttpStatusCode.OK, mapOf("message" to "Saved successfully"))
             }
+
+            delete("/save") {
+                val userId = call.requireHeader("userId").toUInt()
+
+                try {
+                    val username = mainService.delete(userId)
+                    call.respond(HttpStatusCode.OK, mapOf("message" to "Save deleted successfully for user $username"))
+                } catch (e: NoSuchElementException) {
+                    call.respond(HttpStatusCode.InternalServerError, mapOf("message" to "No save data found for userId $userId"))
+                }
+            }
         }
     }
 }

@@ -260,6 +260,19 @@ class MainService(val database: R2dbcDatabase) {
         }
     }
 
+    suspend fun delete(userId: UInt): String = suspendTransaction(database) {
+        GameItemSaves.deleteWhere { GameItemSaves.userId eq userId }
+
+        val username = Users.select(Users.username)
+            .where { Users.id eq userId }
+            .map { it[Users.username] }
+            .single()
+
+        Users.deleteWhere { Users.username eq username }
+
+        username
+    }
+
 
     @Throws(NoSuchElementException::class)
     private suspend fun getUserRow(userId: UInt) = suspendTransaction(database) {
