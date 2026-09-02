@@ -2,7 +2,6 @@ package alfredabdo.ktor.idlegame.data.values
 
 import alfredabdo.ktor.idlegame.data.Achievement
 import alfredabdo.ktor.idlegame.data.AchievementCondition
-import alfredabdo.ktor.idlegame.format.GameFormatter
 
 val achievements: List<Achievement>
     get() = listOf(
@@ -24,7 +23,7 @@ val achievements: List<Achievement>
         ),
         Achievement(
             3u,
-            "Get any item duration to ${GameFormatter.formatDuration(infiniteAnimationThreshold)} or below",
+            "Get any item duration to $infiniteAnimationThreshold or below",
             "NOT THE EYES!",
             listOf(
                 AchievementCondition.anyItem { fillRate { leq(infiniteAnimationThreshold.inWholeMilliseconds) } },
